@@ -3,353 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EVs Pokémon - Serveur Cobblemon</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Gestionnaire de Mots de Passe - SISR & SLAM</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="background-overlay"></div>
-    
-    <header>
-        <h1>Guide complet des EVs par biome au safari</h1>
-        <div class="discord-contact">
-            <p>Des questions ? Des suggestions :</p>
-            <div class="contact-info">
-                <img src="Discord_Logo.png" alt="Discord" class="discord-logo"> jrm_gray
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-title">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                </svg>
+                <h1>Gestionnaire de Mots de Passe groupe 7 </h1>
             </div>
-        </div>
-    </header>
-
-    <main>
-        <div class="introduction-section">
-            <h2>Bienvenue dans le Guide des EVs</h2>
-            <div class="intro-content">
-                <p>Ce guide vous aide à optimiser l'entraînement de vos Pokémon en vous indiquant où trouver les Pokémon qui donnent les EVs (Effort Values) souhaités au safari.</p>
-                
-                <div class="ev-explanation">
-                    <h3>Qu'est-ce que les EVs ?</h3>
-                    <p>Les EVs sont des points d'effort qui augmentent les statistiques de base de vos Pokémon. Chaque Pokémon vaincu donne des EVs dans une ou plusieurs statistiques spécifiques.</p>
-                </div>
-
-                <div class="how-to-use">
-                    <h3>Comment utiliser ce guide ?</h3>
-                    <ul>
-                        <li><strong><a href="#search-section" class="section-link">Recherche rapide</a></strong> : Utilisez le menu déroulant ci-dessous pour trouver tous les Pokémon donnant une stat spécifique</li>
-                        <li><strong><a href="#tabs-container" class="section-link">Exploration par biome</a></strong> : Parcourez les différents biomes pour voir quels Pokémon s'y trouvent</li>
-                    </ul>
-                </div>
-            </div>
+            <p class="header-subtitle">Projet AP Groupe 7 </p>
         </div>
 
-        <div class="search-section" id="search-section">
-            <h2>Recherche d'EVs</h2>
-            <div class="search-container">
-                <label for="ev-search">Je recherche des EVs en :</label>
-                <select id="ev-search">
-                    <option value="">Choisir une stat...</option>
-                    <option value="Attaque">Attaque</option>
-                    <option value="Attaque Spéciale">Attaque Spéciale</option>
-                    <option value="Défense">Défense</option>
-                    <option value="Défense Spéciale">Défense Spéciale</option>
-                    <option value="Vitesse">Vitesse</option>
-                    <option value="PV">PV</option>
-                </select>
-            </div>
-            <div id="search-results" class="search-results"></div>
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-button active-sisr" data-tab="SISR">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <rect width="20" height="8" x="2" y="2" rx="2" ry="2"/>
+                    <rect width="20" height="8" x="2" y="14" rx="2" ry="2"/>
+                    <path d="M6 6h.01M6 18h.01"/>
+                </svg>
+                SISR - Solutions d'Infrastructure
+            </button>
+            <button class="tab-button" data-tab="SLAM">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <polyline points="16 18 22 12 16 6"/>
+                    <polyline points="8 6 2 12 8 18"/>
+                </svg>
+                SLAM - Solutions Logicielles
+            </button>
         </div>
 
-        <div class="tabs-container" id="tabs-container">
-            <div class="tabs">
-                <button class="tab-button active" data-tab="magma">Biome Magma</button>
-                <button class="tab-button" data-tab="montagne">Biome Montagne</button>
-                <button class="tab-button" data-tab="foret">Biome Forêt</button>
-                <button class="tab-button" data-tab="desert">Biome Désert</button>
-                <button class="tab-button" data-tab="tropical">Biome Tropical</button>
-                <button class="tab-button" data-tab="tenebre">Biome Ténèbres</button>
-                <button class="tab-button" data-tab="glacier">Biome Glacier</button>
-                <button class="tab-button" data-tab="messa">Biome Mesa</button>
-            </div>
-
-            <div class="tab-content">
-                <!-- Biome Magma -->
-                <div id="magma" class="tab-panel active">
-                    <h2>Biome Magma</h2>
-                    <div class="ev-info">
-                        <h3>Pokémon trouvés :</h3>
-                        <ul>
-                            <li><strong>Limagma</strong> - EVs: Attaque Spéciale</li>
-                            <li><strong>Volcaropod</strong> - EVs: Défense</li>
-                            <li><strong>Chamallot</strong> - EVs: Attaque Spéciale</li>
-                            <li><strong>Camerupt</strong> - EVs: Attaque, Attaque Spéciale</li>
-                            <li><strong>Caninos</strong> - EVs: Attaque</li>
-                            <li><strong>Arcanin</strong> - EVs: Attaque</li>
-                            <li><strong>Ponyta</strong> - EVs: Vitesse</li>
-                            <li><strong>Galopa</strong> - EVs: Vitesse</li>
-                            <li><strong>Tritox</strong> - EVs: Vitesse</li>
-                            <li><strong>Malamandre</strong> - EVs: Vitesse</li>
-                            <li><strong>Grondogue</strong> - EVs: Attaque</li>
-                            <li><strong>Magby</strong> - EVs: Vitesse</li>
-                            <li><strong>Magmar</strong> - EVs: Attaque Spéciale</li>
-                            <li><strong>Maganon</strong> - EVs: Attaque Spéciale</li>
-                            <li><strong>Malosse</strong> - EVs: Attaque Spéciale</li>
-                            <li><strong>Démolosse</strong> - EVs: Attaque Spéciale</li>
-                            <li><strong>Mimigal</strong> - EVs: Attaque</li>
-                            <li><strong>Chacripan</strong> - EVs: Vitesse</li>
-                            <li><strong>Smogo</strong> - EVs: Défense</li>
-                            <li><strong>Voltoutou</strong> - EVs: PV</li>
-                            <li><strong>Statitik</strong> - EVs: Vitesse</li>
-                            <li><strong>Darumarond</strong> - EVs: Attaque</li>
-                            <li><strong>Chartor</strong> - EVs: Défense</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Biome Montagne -->
-                <div id="montagne" class="tab-panel">
-                    <h2>Biome Montagne</h2>
-                    <div class="ev-info">
-                        <h3>Pokémon trouvés :</h3>
-                        <ul>
-                            <li><strong>Galekid</strong> (toutes les évolutions) - EVs: Défense</li>
-                            <li><strong>Golemastoc</strong> (toutes les évolutions) - EVs: Attaque</li>
-                            <li><strong>Gigalithe</strong> - EVs: Attaque, Défense</li>
-                            <li><strong>Onix et Steelix</strong> - EVs: Défense</li>
-                            <li><strong>Rhinocorne, Rhinoféros</strong> - EVs: Défense, Attaque</li>
-                            <li><strong>Racaillou, Gravalanche</strong> - EVs: Défense</li>
-                            <li><strong>Strassie</strong> - EVs: Défense, Défense Spéciale</li>
-                            <li><strong>Ouvrifier</strong> (et évolutions) - EVs: Attaque</li>
-                            <li><strong>Taupiqueur, Triopikeur</strong> - EVs: Vitesse</li>
-                            <li><strong>Roucoups</strong> - EVs: Vitesse</li>
-                            <li><strong>Tarinorme</strong> - EVs: Défense, Défense Spéciale</li>
-                            <li><strong>Doudouvet</strong> - EVs: Vitesse</li>
-                            <li><strong>Pyrobut</strong> (et évolutions) - EVs: Vitesse</li>
-                            <li><strong>Coxyclaque</strong> - EVs: Défense Spéciale</li>
-                            <li><strong>Moumouton</strong> - EVs: Défense</li>
-                            <li><strong>Wattouat</strong> - EVs: Attaque Spéciale</li>
-                            <li><strong>Coudlangue</strong> - EVs: PV</li>
-                            <li><strong>Malosse</strong> - EVs: Attaque Spéciale</li>
-                            <li><strong>Ponyta</strong> - EVs: Vitesse</li>
-                            <li><strong>Zigzaton</strong> - EVs: Vitesse</li>
-                            <li><strong>Campagnol</strong> - EVs: Vitesse</li>
-                            <li><strong>Négapi</strong> - EVs: Vitesse</li>
-                            <li><strong>Posipi</strong> - EVs: Vitesse</li>
-                            <li><strong>Voltoutou</strong> - EVs: PV</li>
-                            <li><strong>Linéon</strong> - EVs: Vitesse</li>
-                            <li><strong>Snubbull</strong> - EVs: Attaque</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Biome Forêt -->
-                <div id="foret" class="tab-panel">
-                    <h2>Biome Forêt</h2>
-                    <div class="ev-info">
-                        <h3>Pokémon trouvés :</h3>
-                        <ul>
-                            <li><strong>Rozbouton</strong> - EVs: Attaque Spéciale</li>
-                            <li><strong>Rosélia</strong> - EVs: Attaque Spéciale</li>
-                            <li><strong>Nénupiot</strong> - EVs: Défense Spéciale</li>
-                            <li><strong>Grainipiot</strong> - EVs: Défense</li>
-                            <li><strong>Pifeuil</strong> - EVs: Attaque</li>
-                            <li><strong>Mystherbe</strong> - EVs: Attaque Spéciale</li>
-                            <li><strong>Caninos</strong> - EVs: Attaque</li>
-                            <li><strong>Parasect</strong> - EVs: Attaque, Défense</li>
-                            <li><strong>Paras</strong> - EVs: Attaque</li>
-                            <li><strong>Migalos</strong> - EVs: Attaque</li>
-                            <li><strong>Teddiursa</strong> - EVs: Attaque</li>
-                            <li><strong>Snubbull</strong> - EVs: Attaque</li>
-                            <li><strong>Ursaring</strong> - EVs: Attaque</li>
-                            <li><strong>Gaulet</strong> - EVs: PV</li>
-                            <li><strong>Lombre</strong> - EVs: Défense Spéciale</li>
-                            <li><strong>Chenipan</strong> - EVs: PV</li>
-                            <li><strong>Grondogue</strong> - EVs: Attaque</li>
-                            <li><strong>Mimigal</strong> - EVs: Attaque</li>
-                            <li><strong>Ortide</strong> - EVs: Attaque Spéciale</li>
-                            <li><strong>Coxy</strong> - EVs: Défense Spéciale</li>
-                            <li><strong>Trompignon</strong> - EVs: PV</li>
-                            <li><strong>Gourmelet</strong> - EVs: PV</li>
-                            <li><strong>Doudouvet</strong> - EVs: Vitesse</li>
-                            <li><strong>Dolman</strong> - EVs: Défense</li>
-                            <li><strong>Malosse</strong> - EVs: Attaque Spéciale</li>
-                            <li><strong>Fragroin</strong> - EVs: PV</li>
-                            <li><strong>Plumeline</strong> - EVs: Attaque Spéciale</li>
-                            <li><strong>Coxyclaque</strong> - EVs: Défense Spéciale</li>
-                            <li><strong>Miradar</strong> - EVs: Attaque</li>
-                            <li><strong>Zigzaton</strong> - EVs: Vitesse</li>
-                            <li><strong>Rattata</strong> - EVs: Vitesse</li>
-                            <li><strong>Vivaldaim</strong> - EVs: Vitesse</li>
-                            <li><strong>Wattouat</strong> - EVs: Attaque Spéciale</li>
-                            <li><strong>Toudoudou</strong> - EVs: PV</li>
-                            <li><strong>Campagnol</strong> - EVs: Vitesse</li>
-                            <li><strong>Ratentif</strong> - EVs: Attaque</li>
-                            <li><strong>Linéon</strong> - EVs: Vitesse</li>
-                            <li><strong>Fouinette</strong> - EVs: Attaque</li>
-                            <li><strong>Moumouton</strong> - EVs: Défense</li>
-                            <li><strong>Élekid</strong> - EVs: Vitesse</li>
-                            <li><strong>Nirondelle</strong> - EVs: Vitesse</li>
-                            <li><strong>Morphéo</strong> - EVs: PV</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Biome Désert -->
-                <div id="desert" class="tab-panel">
-                    <h2>Biome Désert</h2>
-                    <div class="ev-info">
-                        <h3>Pokémon trouvés :</h3>
-                        <ul>
-                            <li><strong>Balbuto</strong> - EVs: Défense Spéciale</li>
-                            <li><strong>Kaorine</strong> - EVs: Défense Spéciale</li>
-                            <li><strong>Sabelette</strong> - EVs: Défense</li>
-                            <li><strong>Sablaireau</strong> - EVs: Défense</li>
-                            <li><strong>Couafarel</strong> - EVs: Vitesse</li>
-                            <li><strong>Rattata</strong> - EVs: Vitesse</li>
-                            <li><strong>Galekid</strong> - EVs: Défense</li>
-                            <li><strong>Galegon</strong> - EVs: Défense</li>
-                            <li><strong>Dynavolt</strong> - EVs: Vitesse</li>
-                            <li><strong>Zigzaton</strong> - EVs: Vitesse</li>
-                            <li><strong>Mascaïman</strong> - EVs: Attaque</li>
-                            <li><strong>Escroco</strong> - EVs: Attaque</li>
-                            <li><strong>Goupelin</strong> - EVs: Attaque Spéciale</li>
-                            <li><strong>Miaouss</strong> - EVs: Vitesse</li>
-                            <li><strong>Fouinette</strong> - EVs: Attaque</li>
-                            <li><strong>Malosse</strong> - EVs: Attaque Spéciale</li>
-                            <li><strong>Embrylex</strong> - EVs: Attaque</li>
-                            <li><strong>Yanma</strong> - EVs: Vitesse</li>
-                            <li><strong>Dardargnan</strong> - EVs: Attaque</li>
-                            <li><strong>Kraknoix</strong> - EVs: Attaque</li>
-                            <li><strong>Vibraninf</strong> - EVs: Attaque, Vitesse</li>
-                            <li><strong>Ninjask</strong> - EVs: Vitesse</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Biome Tropical -->
-                <div id="tropical" class="tab-panel">
-                    <h2>Biome Tropical</h2>
-                    <div class="ev-info">
-                        <h3>Pokémon trouvés :</h3>
-                        <ul>
-                            <li><strong>Corayon</strong> - EVs: Défense, Défense Spéciale</li>
-                            <li><strong>Colhomard</strong> - EVs: Attaque</li>
-                            <li><strong>Écrapince</strong> - EVs: Attaque</li>
-                            <li><strong>Tropius</strong> - EVs: PV</li>
-                            <li><strong>Goélise</strong> - EVs: Vitesse</li>
-                            <li><strong>Bekipan</strong> - EVs: Défense</li>
-                            <li><strong>Froussardine</strong> - EVs: PV</li>
-                            <li><strong>Crabicoque</strong> - EVs: Défense</li>
-                            <li><strong>Crabaraque</strong> - EVs: Défense</li>
-                            <li><strong>Crabagarre</strong> - EVs: Attaque</li>
-                            <li><strong>Carvanha</strong> - EVs: Attaque</li>
-                            <li><strong>Sharpedo</strong> - EVs: Attaque</li>
-                            <li><strong>Barbicha</strong> - EVs: PV</li>
-                            <li><strong>Barloche</strong> - EVs: PV</li>
-                            <li><strong>Axoloto</strong> - EVs: PV</li>
-                            <li><strong>Maraiste</strong> - EVs: PV</li>
-                            <li><strong>Nénupiot</strong> - EVs: Défense Spéciale</li>
-                            <li><strong>Lombre</strong> - EVs: Défense Spéciale</li>
-                            <li><strong>Araqua</strong> - EVs: Défense Spéciale</li>
-                            <li><strong>Tarenbulle</strong> - EVs: Défense Spéciale</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Biome Ténèbres -->
-                <div id="tenebre" class="tab-panel">
-                    <h2>Biome Ténèbres</h2>
-                    <div class="ev-info">
-                        <h3>Pokémon trouvés :</h3>
-                        <ul>
-                            <li><strong>Spectrum</strong> - EVs: Attaque Spéciale</li>
-                            <li><strong>Chovsourir</strong> - EVs: Vitesse</li>
-                            <li><strong>Fantominus</strong> - EVs: Attaque Spéciale</li>
-                            <li><strong>Cornèbre</strong> - EVs: Vitesse</li>
-                            <li><strong>Téraclope</strong> - EVs: Défense, Défense Spéciale</li>
-                            <li><strong>Lugulabre</strong> - EVs: Attaque Spéciale</li>
-                            <li><strong>Médhyèna</strong> - EVs: Attaque</li>
-                            <li><strong>Moyade</strong> - EVs: Défense Spéciale</li>
-                            <li><strong>Mimigal</strong> - EVs: Attaque</li>
-                            <li><strong>Grahyèna</strong> - EVs: Attaque</li>
-                            <li><strong>Migalos</strong> - EVs: Attaque</li>
-                            <li><strong>Zigzaton</strong> - EVs: Vitesse</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Biome Glacier -->
-                <div id="glacier" class="tab-panel">
-                    <h2>Biome Glacier</h2>
-                    <div class="ev-info">
-                        <h3>Pokémon trouvés :</h3>
-                        <ul>
-                            <li><strong>Négapi</strong> - EVs: Vitesse</li>
-                            <li><strong>Polarhume</strong> - EVs: Attaque</li>
-                            <li><strong>Polagriffe</strong> - EVs: Attaque</li>
-                            <li><strong>Marcacrin</strong> - EVs: Attaque</li>
-                            <li><strong>Cochignon</strong> - EVs: Attaque, PV</li>
-                            <li><strong>Obalie</strong> - EVs: PV</li>
-                            <li><strong>Phogleur</strong> - EVs: PV</li>
-                            <li><strong>Amagara</strong> - EVs: PV</li>
-                            <li><strong>Sabelette (forme Alola)</strong> - EVs: Défense</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Biome Mesa -->
-                <div id="messa" class="tab-panel">
-                    <h2>Biome Mesa</h2>
-                    <div class="ev-info">
-                        <h3>Pokémon trouvés :</h3>
-                        <ul>
-                            <li><strong>Pharamp</strong> - EVs: Attaque Spéciale</li>
-                            <li><strong>Kangourex</strong> - EVs: PV</li>
-                            <li><strong>Lixy</strong> - EVs: Attaque</li>
-                            <li><strong>Luxio</strong> - EVs: Attaque</li>
-                            <li><strong>Tauros</strong> - EVs: Attaque, Vitesse</li>
-                            <li><strong>Sapereau</strong> - EVs: Vitesse</li>
-                            <li><strong>Excavarenne</strong> - EVs: PV</li>
-                            <li><strong>Wattouat</strong> - EVs: Attaque Spéciale</li>
-                            <li><strong>Dodrio</strong> - EVs: Attaque</li>
-                            <li><strong>Fouinar</strong> - EVs: Attaque</li>
-                            <li><strong>Caninos</strong> - EVs: Attaque</li>
-                            <li><strong>Miaouss</strong> - EVs: Vitesse</li>
-                            <li><strong>Persian</strong> - EVs: Vitesse</li>
-                            <li><strong>Chacripan</strong> - EVs: Vitesse</li>
-                            <li><strong>Smogo</strong> - EVs: Défense</li>
-                            <li><strong>Ratentif</strong> - EVs: Attaque</li>
-                            <li><strong>Miradar</strong> - EVs: Attaque</li>
-                            <li><strong>Voltoutou</strong> - EVs: PV</li>
-                            <li><strong>Snubbull</strong> - EVs: Attaque</li>
-                            <li><strong>Girafarig</strong> - EVs: Attaque Spéciale</li>
-                            <li><strong>Tiboudet</strong> - EVs: Attaque</li>
-                            <li><strong>Bourrinos</strong> - EVs: Attaque</li>
-                            <li><strong>Lainergie</strong> - EVs: Attaque Spéciale</li>
-                            <li><strong>Fouinette</strong> - EVs: Attaque</li>
-                            <li><strong>Briochien</strong> - EVs: Vitesse</li>
-                            <li><strong>Rattata</strong> - EVs: Vitesse</li>
-                            <li><strong>Rattatac</strong> - EVs: Vitesse</li>
-                            <li><strong>Ponyta</strong> - EVs: Vitesse</li>
-                            <li><strong>Doduo</strong> - EVs: Attaque</li>
-                            <li><strong>Hippopotas</strong> - EVs: Défense</li>
-                            <li><strong>Plumeline</strong> - EVs: Attaque Spéciale</li>
-                            <li><strong>Doudouvet</strong> - EVs: Vitesse</li>
-                            <li><strong>Roucool</strong> - EVs: Vitesse</li>
-                            <li><strong>Mime Jr.</strong> - EVs: Défense Spéciale</li>
-                            <li><strong>Voltorbe</strong> - EVs: Vitesse</li>
-                            <li><strong>Coxy</strong> - EVs: Défense Spéciale</li>
-                            <li><strong>Coxyclaque</strong> - EVs: Défense Spéciale</li>
-                            <li><strong>Hippodocus</strong> - EVs: Défense</li>
-                            <li><strong>Malosse</strong> - EVs: Attaque Spéciale</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <!-- Search -->
+        <div class="search-container">
+            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <circle cx="11" cy="11" r="8"/>
+                <path d="m21 21-4.3-4.3"/>
+            </svg>
+            <input type="text" id="searchInput" class="search-input" placeholder="Rechercher un service, utilisateur ou catégorie...">
         </div>
-    </main>
 
-    <footer>
-        <p>&copy; 2025 - Jrm  - Guide des EVs au safari </p>
-    </footer>
+        <!-- Categories Container -->
+        <div id="categoriesContainer" class="categories"></div>
+
+    </div>
 
     <script src="script.js"></script>
 </body>
-</html> 
+</html>
