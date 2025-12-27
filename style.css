@@ -19,7 +19,7 @@ body {
 
 /* Header */
 .header {
-    text-center;
+    text-align: center;
     margin-bottom: 32px;
 }
 
@@ -131,6 +131,37 @@ body {
 
 .search-input::placeholder {
     color: #94a3b8;
+}
+
+/* pfSense Button */
+.pfsense-button-container {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.pfsense-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 32px;
+    background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s;
+    box-shadow: 0 10px 25px rgba(220, 38, 38, 0.4);
+}
+
+.pfsense-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(220, 38, 38, 0.6);
+}
+
+.pfsense-button svg {
+    width: 24px;
+    height: 24px;
 }
 
 /* Categories */
@@ -287,7 +318,7 @@ body {
 /* Footer */
 .footer {
     margin-top: 32px;
-    text-center;
+    text-align: center;
     color: #94a3b8;
     font-size: 0.875rem;
 }
