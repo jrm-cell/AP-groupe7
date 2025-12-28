@@ -133,24 +133,35 @@ body {
     color: #94a3b8;
 }
 
-/* pfSense Button */
-.pfsense-button-container {
+/* Config Buttons */
+.config-buttons-container {
     margin-bottom: 24px;
-    text-align: center;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.pfsense-button {
+.config-button {
     display: inline-flex;
     align-items: center;
     gap: 8px;
     padding: 16px 32px;
-    background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
     color: white;
     text-decoration: none;
     border-radius: 8px;
     font-weight: 600;
     font-size: 1rem;
     transition: all 0.3s;
+}
+
+.config-button svg {
+    width: 24px;
+    height: 24px;
+}
+
+.pfsense-button {
+    background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
     box-shadow: 0 10px 25px rgba(220, 38, 38, 0.4);
 }
 
@@ -159,9 +170,14 @@ body {
     box-shadow: 0 15px 35px rgba(220, 38, 38, 0.6);
 }
 
-.pfsense-button svg {
-    width: 24px;
-    height: 24px;
+.switch-button {
+    background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
+    box-shadow: 0 10px 25px rgba(8, 145, 178, 0.4);
+}
+
+.switch-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(8, 145, 178, 0.6);
 }
 
 /* Categories */
